@@ -1,0 +1,32 @@
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+    <title>SchoolDetail Page</title>
+{% endblock %}
+
+
+{% block body_block  %}
+
+<center>
+        <h1>Detail view of selected instance</h1>
+
+
+
+
+        <h2>name of the school is {{scobject.scname}}</h2>
+        
+        <h2>location of the school is {{scobject.sclocation}}</h2>
+        <h2>principal of the school is {{scobject.scprincipal}}</h2>
+
+<h1>information of {{scobject.scname}}'s Students is </h1>
+{% for sto in scobject.students.all %}
+    <h2>student name is {{sto.stname}}</h2>
+    <h2>student age is {{sto.stage}}</h2>
+    <hr>
+    
+{% endfor %}
+    <a href="{% url 'SchoolUpdate' pk=scobject.pk %}" class="btn btn-primary">update</a>
+    <a href="{% url 'SchoolDelete' pk=scobject.pk %}" class="btn btn-danger">Delete</a>
+
+    </center>
+{% endblock %}

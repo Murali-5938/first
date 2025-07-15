@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>QLEDMO</h1>
+        <table border="3px">
+            <tr>
+                <th>EmpEmpno</th>
+                <th>EmpEname</th>
+                <th>Empjob</th>
+                <th>Empsal</th>
+                <th>MgrEmpno</th>
+                <th>MgrEname</th>
+                <th>MgrEjob</th>
+                <th>MgrEsal</th>
+                <th>deptdname</th>
+                <th>deptdloc</th>
+                <th>deptdept</th>
+
+            </tr>
+        {% for EDMO in QLEDMO  %}
+            <tr>
+                <td>{{EDMO.empid}}</td>
+                <td>{{EDMO.ename}}</td>
+                <td>{{EDMO.job}}</td>
+                <td>{{EDMO.sal}}</td>
+                <td>{{EDMO.mgr.empid}}</td>
+                <td>{{EDMO.mgr.ename}}</td>
+                <td>{{EDMO.mgr.job}}</td>
+                <td>{{EDMO.mgr.sal}}</td>
+                <td>{{EDMO.deptno.dname}}</td>
+                <td>{{EDMO.deptno.dloc}}</td>
+                <td>{{EDMO.deptno.deptno}}</td>
+
+            </tr>
+                
+        {% endfor %}
+        </table>
+    </center>
+    
+</body>
+</html>

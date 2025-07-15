@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+        <table border="3px">
+            <tr>
+                <th>Dname</th>
+                <th>Empno</th>
+                <th>Empname</th>
+                <th>job</th>
+                <th>deptno</th>
+            </tr>
+        {% for do in QLDTO %}
+        {% for eo in do.emp_set.all %}
+        <tr>
+            {% if forloop.first %}
+            <td rowspan="{{do.emp_set.all|length }}">{{do.dname}}</td>
+            {% endif %}
+               <td>{{eo.empid}}</td>
+               <td>{{eo.ename}}</td>
+               <td>{{eo.job}}</td>
+               <td>{{eo.deptno}}</td>
+
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+               
+
+        </table>
+
+</body>
+</html>

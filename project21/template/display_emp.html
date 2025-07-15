@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            background-color: blueviolet;
+            color:brown
+
+
+        }
+        h1
+        {
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <center>
+
+        <table border="3px" width="200px" height="150px" >
+            <thead><h1>emp</h1></thead>
+            <tr><th align="center" >empno</th>
+                <th align="center">ename</th>
+                <th align="center">job</th>
+                <th align="center">mgr</th>
+                <th align="center">hiredate</th>
+                <th align="center">sal</th>
+                <th align="center">comm</th>
+                <th align="center">deptno</th>
+            </tr>
+
+        {% for TO in EMPTL %}
+
+            <tr>
+                <td align="center">{{TO.empid}}</td>
+                <td align="center">{{TO.ename}}</td>
+                <td align="center">{{TO.job}}</td>
+                <td align="center">{{TO.mgr}}</td>
+                <td align="center">{{TO.hiredate}}</td>
+                <td align="center" container="sal">{{TO.sal}}</td>
+                <td align="center">{{TO.comm}}</td>
+                <td align="center">{{TO.deptno}}</td>
+            </tr>
+
+        {% endfor %}
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+    </center>
+</body>
+</html>

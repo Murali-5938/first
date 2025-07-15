@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <table border="3px">
+            <thead><h1>SALARY GRADE</h1></thead>
+            <tr><td align="center">salgrade</td>
+                <td align="center">losal</td>
+                <td align="center">hisal</td></tr>
+        {% for SAL in SGPTL %}
+            <tr>
+                <td align="center">{{SAL.grade}}</td>
+                <td align="center">{{SAL.losal}}</td>
+                <td align="center">{{SAL.hisal}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+
+    </center>
+    
+</body>
+</html>

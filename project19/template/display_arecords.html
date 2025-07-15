@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <table border="5px">
+            <thead>ACCESS RECORDS</thead>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Author</th>
+            </tr>
+        {% for at in ARTL %}
+            <tr>
+                <td>{{at.name}}</td>
+                <td>{{at.date}}</td>
+                <td>{{at.author}}</td>
+            </tr>
+        {% endfor %}
+
+        </table>
+    </center>
+    
+</body>
+</html>

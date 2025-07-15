@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <table border="3px">
+            <thead><h1>WEBPAGE</h1></thead>
+            <tr><th>topic_name</th>
+                <th>name</th>
+                <th>url</th>
+                <th>email</th>
+            </tr>
+        {% for tp in WPTL %}
+            <tr>
+                <td>{{tp.topic_name}}</td>
+                <td>{{tp.name}}</td>
+                <td>{{tp.url}}</td>
+                <td>{{tp.email}}</td>
+            </tr>
+        {% endfor %}            
+        </table>
+    </center>
+</body>
+</html>

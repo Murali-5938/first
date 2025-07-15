@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            background-color: blueviolet;
+            color:cadetblue
+
+
+        }
+        th
+        {
+            background-color: blue;
+            color: yellowgreen;
+        }
+        tr
+        {
+            color: black;
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+
+        <table border="3px" width="200px" height="150px" >
+            <thead><h1>emp</h1></thead>
+            <tr><th align="center" >empno</th>
+                <th align="center">ename</th>
+                <th align="center">job</th>
+                <th align="center">mgr</th>
+                <th align="center">hiredate</th>
+                <th align="center">sal</th>
+                <th align="center">comm</th>
+                <th align="center">deptno</th>
+                <th align="center">dname</th>
+                <th align="center">deptno</th>
+                <th align="center">dlocation</th>
+                
+            </tr>
+
+        {% for TO in QLEDO %}
+
+            <tr>
+                <td align="center">{{TO.empid}}</td>
+                <td align="center">{{TO.ename}}</td>
+                <td align="center">{{TO.job}}</td>
+                <td align="center">{{TO.mgr}}</td>
+                <td align="center">{{TO.hiredate}}</td>
+                <td align="center" >{{TO.sal}}</td>
+                <td align="center">{{TO.comm}}</td>
+                <td align="center">{{TO.deptno.deptno}}</td>
+                <td align="center">{{TO.deptno.dname}}</td>
+                <td align="center">{{TO.deptno.deptno}}</td>
+                <td align="center">{{TO.deptno.dloc}}</td>
+            </tr>
+
+        {% endfor %}
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+    </center>
+</body>
+</html>

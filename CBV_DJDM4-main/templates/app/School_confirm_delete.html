@@ -1,0 +1,18 @@
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+    <title>Delete page Page</title>
+{% endblock %}
+
+
+{% block body_block  %}
+
+<center>
+       <h1>are you sure you want to Delete{{ scobjects.scname }}?</h1>
+       <form method="POST">
+        {% csrf_token %}
+        <input type="submit" value="yes,sure">
+       </form>
+       <a href="{% url 'SchoolList'  %}">take back</a>
+    </center>
+{% endblock %}

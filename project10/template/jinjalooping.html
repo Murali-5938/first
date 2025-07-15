@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>looping statements</h1>
+    {% for key, fruit in fruits.items %}
+        {% if fruit == 'apple' %}
+           <h1>the fruit is apple</h1>
+        {% else %}
+             <h1>the fruit is not apple</h1>
+        {% endif %}
+    {% endfor %}
+    </center>
+    
+</body>
+</html>

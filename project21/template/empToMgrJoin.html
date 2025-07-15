@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <table border="3px" >
+            <tr>
+                <th>Empno</th>
+                <th>Empname</th>
+                <th>job</th>
+                <th>sal</th>
+                <th>comm</th>
+                <th>mgr</th>
+                <th>deptno</th>
+                <th>hiredate</th>
+                <th>MgrEmpno</th>
+                <th>MgrEmpname</th>
+                <th>Mgrjob</th>
+                <th>Mgrsal</th>
+                <th>Mgrcomm</th>
+                <th>Mgrmgr</th>
+                <th>Mgrdeptno</th>
+                <th>Mgrhiredate</th>
+
+            </tr>
+        {% for i in ELMJT %}
+               <tr>
+                <td>{{i.empid}}</td>
+                <td>{{i.ename}}</td>
+                <td>{{i.job}}</td>
+                <td>{{i.sal}}</td>
+                <td>{{i.comm}}</td>
+                <td>{{i.mgr.mgr}}</td>
+                <td>{{i.deptno}}</td>
+                <td>{{i.hiredate}}</td>
+                <td>{{i.mgr.empid}}</td>
+                <td>{{i.mgr.ename}}</td>
+                <td>{{i.mgr.job}}</td>
+                <td>{{i.mgr.sal}}</td>
+                <td>{{i.mgr.comm}}</td>
+                <td>{{i.mgr.mgr}}</td>
+                <td>{{i.mgr.deptno}}</td>
+                <td>{{i.mgr.hiredate}}</td>
+               </tr>
+        {% endfor %}
+        </table>
+    </center>
+    
+</body>
+</html>
